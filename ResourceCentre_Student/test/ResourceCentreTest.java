@@ -51,7 +51,7 @@ public class ResourceCentreTest {
 	@Test
 	public void addChromebookTest() {
 		//fail("Not yet implemented");
-		// write your code here
+		// write your code here (
 		cb2 = new Chromebook ("", "", "");
 		ResourceCentre.addChromebook(chromebookList, cb2);
 		assertSame("Test to see if the program add the blank object",cb2,chromebookList.get(0));
