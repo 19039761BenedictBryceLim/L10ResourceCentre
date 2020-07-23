@@ -281,7 +281,7 @@ public class ResourceCentre {
 			}
 		}
 		return isLoaned;
-
+	}
 		boolean isLoaned = false;
 
 		for (int i = 0; i < chromebookList.size(); i++) {
