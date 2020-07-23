@@ -132,6 +132,13 @@ public class ResourceCentreTest {
 	public void doReturnChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		//Normal
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		cb1.setIsAvailable(true);
+		assertTrue("Test that return item will change to available to loan", cb1.getIsAvailable());
+		//Error
+		boolean check = ResourceCentre.doReturnChromebook(chromebookList, "CB0013");
+		assertFalse("Test that only items in list can be returned", check);
 	}
 	
 	@After
