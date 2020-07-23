@@ -187,7 +187,7 @@ public class ResourceCentre {
 		camcorderList.add(cc);
 		System.out.println("Camcorder added");
 	}
-<<<<<<< HEAD
+
 	
 	public static Chromebook inputChromebook() {	
 		
@@ -198,17 +198,14 @@ public class ResourceCentre {
 		String description = Helper.readString("Enter description > ");
 		String os = Helper.readString("Enter Os> ");
 		Chromebook cb = new Chromebook(tag,description,os) ;
->>>>>>> branch 'master' of https://github.com/19039761BenedictBryceLim/L10ResourceCentre.git
-		// write your code here
-<<<<<<< HEA
+
 		String asset = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("Enter description > ");
 		String os = Helper.readString("Enter OS > ");
 		
 		Chromebook cb = new Chromebook (asset, description, os);
 		return cb;
-=======
->>>>>>> branch 'master' of https://github.com/19039761BenedictBryceLim/L10ResourceCentre.git
+
 		
 		return cb;
 
@@ -216,18 +213,14 @@ public class ResourceCentre {
 
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
 		// write your code here
-<<<<<<< HEAD
+
 		chromebookList.add(cb);
 		System.out.println("Chromebook added");
 	}
-=======
-<<<<<<< HEAD
+
 		chromebookList.add(cb);
 		System.out.println("Chromebook added");
-=======
->>>>>>> branch 'master' of https://github.com/19039761BenedictBryceLim/L10ResourceCentre.git
-	
->>>>>>> branch 'master' of https://github.com/19039761BenedictBryceLim/L10ResourceCentre.git
+
 	}
 
 	// ================================= Option 3 Loan
