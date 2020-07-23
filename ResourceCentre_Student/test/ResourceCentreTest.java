@@ -52,6 +52,16 @@ public class ResourceCentreTest {
 	public void addChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		cb2 = new Chromebook ("", "", "");
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertSame("Test to see if the program add the blank object",cb2,chromebookList.get(0));
+		
+		cb2 = newChromebook("CB0012", "SAMSUNG Chromebook 4+", "Win 10");
+		chromebookList.clear();
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertEquals("Test to see if the total number of items in the list becomes 2 ", 2, chromebookList.size());
+		
 	}
 	
 	@Test
@@ -89,6 +99,7 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		//String cct = null;
+		
 	
 		
 	}
