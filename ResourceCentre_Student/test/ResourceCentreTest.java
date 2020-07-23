@@ -88,18 +88,6 @@ public class ResourceCentreTest {
 	public void doLoanCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
-<<<<<<< HEAD
-		//String cct = null;
-		ResourceCentre.addCamcorder(camcorderList, cc2);
-		cc2.setIsAvailable(false);
-		boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0012", "8-8-2020");
-		assertFalse("Test that un-available item is NOT ok to loan?", ok);
-		
-		//error condition
-		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0013", "8-8-2020");
-		assertFalse("Test that non-existing item is NOT ok to loan?", ok);
-=======
->>>>>>> branch 'master' of https://github.com/19039761BenedictBryceLim/L10ResourceCentre.git
 		
 		//Error Condition - Unavailable/Already loaned item can't be loaned/borrowed again
 		ResourceCentre.addCamcorder(camcorderList, cc1);
