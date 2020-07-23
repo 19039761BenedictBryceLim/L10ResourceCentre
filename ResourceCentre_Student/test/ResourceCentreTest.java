@@ -58,8 +58,8 @@ public class ResourceCentreTest {
 		
 		cb2 = newChromebook("CB0012", "SAMSUNG Chromebook 4+", "Win 10");
 		chromebookList.clear();
-		ResourceCentre.addChromebook(chromebookList, cb1);
-		ResourceCentre.addChromebook(chromebookList, cb2);
+		ResourceCentre.addChromebook((chromebookList, cb1));
+		ResourceCentre.addChromebook((chromebookList, cb2));
 		assertEquals("Test to see if the total number of items in the list becomes 2 ", 2, chromebookList.size());
 		
 	}
