@@ -92,16 +92,16 @@ public class ResourceCentreTest {
 		//Error Condition - Unavailable/Already loaned item can't be loaned again
 		ResourceCentre.addCamcorder(camcorderList, cc1);
 		cc1.setIsAvailable(false);
-		boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020");
+		boolean check1 = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020");
 	
-		assertFalse("Test that unavailable item is NOT okay to loan?" , ok);
+		assertFalse("Test that unavailable item is NOT okay to loan?" , check1);
 		
-		//Normal Condition
-		ResourceCentre.addCamcorder(camcorderList, cc2);
-		cc2.setIsAvailable(true);
-		boolean check = ResourceCentre.doLoanCamcorder(camcorderList, "CC0012", "9-10-2020");
+		//Normal Condition - Loaning an item
+		ResourceCentre.addCamcorder(camcorderList, cc1);
+		cc1.setIsAvailable(true);
+		boolean check2 = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "9-10-2020");
 		
-		assertTrue("Test that available item is okay to loan", check);
+		assertTrue("Test that available item is okay to loan", check2);
 	
 	}
 	
@@ -115,6 +115,14 @@ public class ResourceCentreTest {
 	public void doReturnCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		
+		
+		
+		
+		//Normal Condition - Returning a loaned item
+		cc1.setIsAvailable(false);
+		boolean check3	= ResourceCentre.doReturnCamcorder(camcorderList, "CC0011");
+		assertFalse("Test that loaned item is okay to return", check3 );
 		
 	}
 	@Test
