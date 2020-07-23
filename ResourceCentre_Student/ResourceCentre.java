@@ -187,47 +187,21 @@ public class ResourceCentre {
 		camcorderList.add(cc);
 		System.out.println("Camcorder added");
 	}
-<<<<<<< HEAD
-	
-	public static Chromebook inputChromebook() {	
-		
-=======
 
 	public static Chromebook inputChromebook() {
 		String tag = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("Enter description > ");
 		String os = Helper.readString("Enter Os> ");
 		Chromebook cb = new Chromebook(tag,description,os) ;
->>>>>>> branch 'master' of https://github.com/19039761BenedictBryceLim/L10ResourceCentre.git
 		// write your code here
-<<<<<<< HEAD
-		String asset = Helper.readString("Enter asset tag > ");
-		String description = Helper.readString("Enter description > ");
-		String os = Helper.readString("Enter OS > ");
-		
-		Chromebook cb = new Chromebook (asset, description, os);
-		return cb;
-=======
->>>>>>> branch 'master' of https://github.com/19039761BenedictBryceLim/L10ResourceCentre.git
-		
 		return cb;
 
 	}
 
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
 		// write your code here
-<<<<<<< HEAD
 		chromebookList.add(cb);
 		System.out.println("Chromebook added");
-	}
-=======
-<<<<<<< HEAD
-		chromebookList.add(cb);
-		System.out.println("Chromebook added");
-=======
->>>>>>> branch 'master' of https://github.com/19039761BenedictBryceLim/L10ResourceCentre.git
-	
->>>>>>> branch 'master' of https://github.com/19039761BenedictBryceLim/L10ResourceCentre.git
 	}
 
 	// ================================= Option 3 Loan
@@ -329,26 +303,12 @@ public class ResourceCentre {
 	public static boolean doReturnChromebook(ArrayList<Chromebook> chromebookList, String tag) {
 		boolean isReturned = false;
 		// write your code here
-		for (int i = 0; i < chromebookList.size(); i++) {
-			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag()) && chromebookList.get(i).getIsAvailable() == false )  
-				chromebookList.get(i).setIsAvailable(true);
-				chromebookList.get(i).setDueDate("");
-				isReturned = true;
-		}
 		return isReturned;
 	}
 
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
-		ResourceCentre.viewAllChromebook(chromebookList);
-		String tag = Helper.readString("Enter asset tag > ");
-		Boolean isReturned = doReturnChromebook(chromebookList, tag);
-		
-		if (isReturned == false) {
-			System.out.println("Invalid asset tag");
-		} else {
-			System.out.println("Chromebook " + tag + " returned");
-		}
+		// write your code here
 	}
 
 }
