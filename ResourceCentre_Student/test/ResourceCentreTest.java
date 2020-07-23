@@ -89,7 +89,7 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		
-		//Error Condition - Unavailable/Already loaned item can't be loaned again
+		//Error Condition - Unavailable/Already loaned item can't be loaned/borrowed again
 		ResourceCentre.addCamcorder(camcorderList, cc1);
 		cc1.setIsAvailable(false);
 		boolean check1 = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020");
