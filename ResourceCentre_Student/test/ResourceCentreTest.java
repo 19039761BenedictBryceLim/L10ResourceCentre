@@ -97,17 +97,46 @@ public class ResourceCentreTest {
 	@Test
 	public void doLoanCamcorderTest() {
 		//fail("Not yet implemented");
+<<<<<<< HEAD
 		// write your code here
 		//String cct = null;
 		
 	
+=======
+		// write your code here
+>>>>>>> branch 'master' of https://github.com/19039761BenedictBryceLim/L10ResourceCentre.git
 		
+		//Error Condition - Unavailable/Already loaned item can't be loaned/borrowed again
+		ResourceCentre.addCamcorder(camcorderList, cc1);
+		cc1.setIsAvailable(false);
+		boolean check1 = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020");
+	
+		assertFalse("Test that unavailable item is NOT okay to be loaned" , check1);
+	
+		//Normal Condition - Loaning an item
+		ResourceCentre.addCamcorder(camcorderList, cc1);
+		cc1.setIsAvailable(true);
+		boolean check2 = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "9-10-2020");
+		
+		assertTrue("Test that available item is okay to returned", check2);
+	
 	}
 	
 	@Test
 	public void doLoanChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		
+		// error condition
+		boolean ok = ResourceCentre.doLoanChromebook(chromebookList,"CB0013", "8-8-2020");
+		assertFalse("Test that invalid item is NOT ok to loan?", ok); 
+		
+		// normal condition
+		boolean okay = ResourceCentre.doLoanChromebook(chromebookList, cb1.getAssetTag(), "8-8-2020");
+		assertTrue("Test that if chromebook is available for loan and is a valid item to loan", okay);
+		
+		
+		
 	}
 	
 	@Test
@@ -115,11 +144,29 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		
+		//Error condition - Returning a non loaned item
+		cc2.setIsAvailable(true);
+		boolean check3	= ResourceCentre.doReturnCamcorder(camcorderList, "CC0012");
+		assertFalse("Test non-loaned item is NOT okay to returned", check3 );
+		
+		
+		//Normal Condition - Returning a loaned item
+		cc1.setIsAvailable(false);
+		boolean check4	= ResourceCentre.doReturnCamcorder(camcorderList, "CC0011");
+		assertFalse("Test that loaned item is okay to be returned", check4 );
+		
 	}
 	@Test
 	public void doReturnChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		//Normal
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		cb1.setIsAvailable(true);
+		assertTrue("Test that return item will change to available to loan", cb1.getIsAvailable());
+		//Error
+		boolean check = ResourceCentre.doReturnChromebook(chromebookList, "CB0013");
+		assertFalse("Test that only items in list can be returned", check);
 	}
 	
 	@After
