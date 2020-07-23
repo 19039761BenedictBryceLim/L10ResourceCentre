@@ -89,7 +89,14 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		//String cct = null;
-	
+		ResourceCentre.addCamcorder(camcorderList, cc2);
+		cc2.setIsAvailable(false);
+		boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0012", "8-8-2020");
+		assertFalse("Test that un-available item is NOT ok to loan?", ok);
+		
+		//error condition
+		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0013", "8-8-2020");
+		assertFalse("Test that non-existing item is NOT ok to loan?", ok);
 		
 	}
 	
@@ -97,6 +104,17 @@ public class ResourceCentreTest {
 	public void doLoanChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		
+		// error condition
+		boolean ok = ResourceCentre.doLoanChromebook(chromebookList,"CB0013", "8-8-2020");
+		assertFalse("Test that invalid item is NOT ok to loan?", ok); 
+		
+		// normal condition
+		boolean okay = ResourceCentre.doLoanChromebook(chromebookList, cb1.getAssetTag(), "8-8-2020");
+		assertTrue("Test that if chromebook is available for loan and is a valid item to loan", okay);
+		
+		
+		
 	}
 	
 	@Test
