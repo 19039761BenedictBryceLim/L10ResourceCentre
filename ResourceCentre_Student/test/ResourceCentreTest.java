@@ -125,7 +125,7 @@ public class ResourceCentreTest {
 		//Normal Condition - Returning a loaned item
 		cc1.setIsAvailable(false);
 		boolean check4	= ResourceCentre.doReturnCamcorder(camcorderList, "CC0011");
-		assertFalse("Test that loaned item is okay to return", check4 );
+		assertFalse("Test that loaned item is okay to be returned", check4 );
 		
 	}
 	@Test
