@@ -134,7 +134,6 @@ public class ResourceCentreTest {
 		// write your code here
 		//Normal
 		ResourceCentre.addChromebook(chromebookList, cb1);
-		ResourceCentre.doReturnChromebook(chromebookList, "CB0011");
 		cb1.setIsAvailable(true);
 		assertTrue("Test that return item will change to available to loan", cb1.getIsAvailable());
 		//Error
