@@ -200,7 +200,7 @@ public class ResourceCentre {
 		Chromebook cb = new Chromebook(tag,description,os) ;
 >>>>>>> branch 'master' of https://github.com/19039761BenedictBryceLim/L10ResourceCentre.git
 		// write your code here
-<<<<<<< HEAD
+<<<<<<< HEA
 		String asset = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("Enter description > ");
 		String os = Helper.readString("Enter OS > ");
