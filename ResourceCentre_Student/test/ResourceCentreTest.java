@@ -119,7 +119,7 @@ public class ResourceCentreTest {
 		//Error condition - Returning a non loaned item
 		cc2.setIsAvailable(true);
 		boolean check3	= ResourceCentre.doReturnCamcorder(camcorderList, "CC0012");
-		assertTrue("Test non-loaned item is NOT okay to returned", check3 );
+		assertFalse("Test non-loaned item is NOT okay to returned", check3 );
 		
 		
 		//Normal Condition - Returning a loaned item
