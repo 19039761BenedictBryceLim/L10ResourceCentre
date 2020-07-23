@@ -101,7 +101,7 @@ public class ResourceCentreTest {
 		cc1.setIsAvailable(true);
 		boolean check2 = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "9-10-2020");
 		
-		assertTrue("Test that available item is okay to return", check2);
+		assertTrue("Test that available item is okay to returned", check2);
 	
 	}
 	
@@ -119,7 +119,7 @@ public class ResourceCentreTest {
 		//Error condition - Returning a non loaned item
 		cc2.setIsAvailable(true);
 		boolean check3	= ResourceCentre.doReturnCamcorder(camcorderList, "CC0012");
-		assertTrue("Test non-loaned item is NOT okay to return", check3 );
+		assertTrue("Test non-loaned item is NOT okay to returned", check3 );
 		
 		
 		//Normal Condition - Returning a loaned item
